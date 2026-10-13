@@ -1,9 +1,11 @@
+
 package com.devflow_backend.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import java.time.LocalDateTime;
 
 @Entity
 public class Task {
@@ -16,6 +18,7 @@ public class Task {
     private String description;
     private String status;
     private String priority;
+    private LocalDateTime reminderAt;
 
     public Task() {
     }
@@ -67,5 +70,13 @@ public class Task {
 
     public void setPriority(String priority) {
         this.priority = priority;
+    }
+
+    public LocalDateTime getReminderAt() {
+        return reminderAt;
+    }
+
+    public void setReminderAt(LocalDateTime reminderAt) {
+        this.reminderAt = reminderAt;
     }
 }

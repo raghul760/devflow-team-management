@@ -59,6 +59,7 @@ public class TaskController {
         task.setDescription(updatedTask.getDescription());
         task.setStatus(updatedTask.getStatus());
         task.setPriority(updatedTask.getPriority());
+        task.setReminderAt(updatedTask.getReminderAt());
 
         return taskRepository.save(task);
     }
